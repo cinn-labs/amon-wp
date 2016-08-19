@@ -1,0 +1,19 @@
+.cnModal {
+  display: none;
+  background: rgba(255,255,255,.95);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: scroll;
+  z-index: 20;
+  color: $white;
+
+  &.dark {
+    background: rgba(0,0,0,.95);
+    color: $detail1;
+  }
+}

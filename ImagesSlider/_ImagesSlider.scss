@@ -1,0 +1,29 @@
+.cnImagesSliderItem {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.cnImagesSlider {
+  &.instagramStyle {
+
+    @include media($large) {
+      @include clearfix;
+      background: white;
+      margin: 0 $xxLargeSize;
+
+      .cnImagesSliderItem .cnImagesSliderItemImage {
+        float: left;
+        width: 65%;
+      }
+
+      .cnImagesSliderItem .cnImagesSliderItemContent {
+        float: right;
+        width: 35%;
+        padding: 0 $largeSize;
+      }
+    }
+  }
+}

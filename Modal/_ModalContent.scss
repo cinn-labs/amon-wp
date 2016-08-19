@@ -1,0 +1,7 @@
+.cnModalContent {
+  color: #333;
+
+  @include media($mediumDown) {
+    padding: 5%;
+  }
+}

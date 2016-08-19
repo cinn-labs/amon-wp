@@ -1,0 +1,33 @@
+.cnInstagramGrid {
+  @include clearfix;
+}
+
+.instagramImg {
+  display: block;
+  width: 20%;
+  float: left;
+  margin: 0;
+  @include transition(all .3s ease-in-out);
+  @include filter(grayscale(100%));
+  @include media($medium) { width: 33.33333333%; }
+  @include media($small) { width: 50%; }
+  img { width: 100%; }
+
+  &:hover {
+    cursor: pointer;
+    @include filter(grayscale(0%));
+  }
+}
+
+.instagramImg.imgNum0,
+.instagramImg.imgNum5 {
+  width: 40%;
+  @include media($medium) { width: 66.6666666666%; }
+  @include media($small) { width: 100%; }
+}
+
+.instagramImg.imgNum5 {
+  float: right;
+  @include media($medium) { width: 33.3333333333%; }
+  @include media($small) { width: 50%; }
+}

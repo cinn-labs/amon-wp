@@ -1,0 +1,11 @@
+.cnFullScreenNavItem {
+  display: block;
+  color: #333;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0.5rem 0;
+
+  &:hover {
+    opacity: .8;
+  }
+}

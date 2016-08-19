@@ -1,0 +1,22 @@
+$parallax-window-height: 300em;
+$parallax-background-height: $parallax-window-height * 2;
+
+.parallax-window {
+  max-height: $parallax-window-height;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.parallax-static-content {
+  position: relative;
+  z-index: 9;
+}
+
+.parallax-background {
+  height: $parallax-background-height;
+  left: 0;
+  position: absolute;
+  top: - $parallax-window-height / 3;
+  width: 100%;
+}
