@@ -1,5 +1,5 @@
-<?php get_template_part( 'packages/_helpers/propsFormatter' ); ?>
-<?php get_template_part( 'packages/_helpers/_general' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/_helpers/propsFormatter' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/_helpers/_general' ); ?>
 
 <?php
   if( !function_exists('Content_BEGIN') ) : function Content_BEGIN($props = array()) {

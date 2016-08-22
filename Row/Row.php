@@ -1,4 +1,4 @@
-<?php get_template_part( 'packages/_helpers/propsFormatter' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/_helpers/propsFormatter' ); ?>
 
 <?php if( !function_exists('Row_BEGIN') ) : function Row_BEGIN($props = array()) { ?>
   <?php

@@ -1,5 +1,5 @@
-<?php get_template_part( 'packages/_helpers/propsFormatter' ); ?>
-<?php get_template_part( 'packages/Anchor/Anchor' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/_helpers/propsFormatter' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/Anchor/Anchor' ); ?>
 
 <?php
   if( !function_exists('FullScreenNavItem') ) : function FullScreenNavItem($props = array()) {

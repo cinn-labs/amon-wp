@@ -1,5 +1,5 @@
-<?php get_template_part( 'packages/Image/Image' ); ?>
-<?php get_template_part( 'packages/Text/Text' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/Image/Image' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/Text/Text' ); ?>
 
 <?php
   if( !function_exists('ImagesSlider') ) : function ImagesSlider($props = array()) {

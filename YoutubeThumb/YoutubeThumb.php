@@ -1,4 +1,4 @@
-<?php get_template_part( 'packages/Image/Image' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/Image/Image' ); ?>
 
 <?php
   if( !function_exists('YoutubeThumb') ) : function YoutubeThumb($props = array()) {

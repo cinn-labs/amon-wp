@@ -1,5 +1,5 @@
-<?php get_template_part( 'packages/_helpers/propsFormatter' ); ?>
-<?php get_template_part( 'packages/Boxed/Boxed' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/_helpers/propsFormatter' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/Boxed/Boxed' ); ?>
 
 <?php
   if( !function_exists('ModalContent_BEGIN') ) : function ModalContent_BEGIN($props = array()) {

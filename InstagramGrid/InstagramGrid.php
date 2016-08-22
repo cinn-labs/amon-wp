@@ -1,8 +1,9 @@
-<?php get_template_part( 'packages/Anchor/Anchor' ); ?>
-<?php get_template_part( 'packages/Image/Image' ); ?>
-<?php get_template_part( 'packages/Modal/Modal' ); ?>
-<?php get_template_part( 'packages/Modal/ModalContent' ); ?>
-<?php get_template_part( 'packages/ImagesSlider/ImagesSlider' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/Anchor/Anchor' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/Image/Image' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/Modal/Modal' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/Modal/ModalContent' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/ImagesSlider/ImagesSlider' ); ?>
+<?php get_template_part( 'node_modules/amon-wp/Icon/Icon' ); ?>
 
 <?php
   function fetchInstagramData($token, $count = 9){
