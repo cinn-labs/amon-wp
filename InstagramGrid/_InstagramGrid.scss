@@ -3,6 +3,7 @@
 }
 
 .instagramImg {
+  position: relative;
   display: block;
   width: 20%;
   float: left;
@@ -13,9 +14,21 @@
   @include media($small) { width: 50%; }
   img { width: 100%; }
 
+  .instagramIconHover {
+    @include transition(all .3s ease-in-out);
+    position: absolute;
+    right: rem(8);
+    bottom: rem(8);
+    font-size: rem(52);
+    color: white;
+    opacity: 0;
+  }
+
   &:hover {
     cursor: pointer;
     @include filter(grayscale(0%));
+
+    .instagramIconHover { opacity: 1; }
   }
 }
 

@@ -43,6 +43,7 @@
 
           Anchor_BEGIN($anchorProps);
             Image(array('filePath'=>$post->images->standard_resolution->url));
+            Icon(array('type'=>'Instagram', 'class'=>'instagramIconHover'));
           Anchor_END();
         }
       }
