@@ -10,7 +10,6 @@
   }
 
 
-
   if( !function_exists('formatClasses') ) {
 
     function formatClasses($props, $mainClass = '', $defaultProps = array()) {
@@ -78,6 +77,10 @@
       // Close modal
       $closeModal = array_key_exists('closeModal', $props) ? $props['closeModal'] : false;
       if($closeModal) $data .= ' data-close-modal';
+
+      // Hide while loads
+      $hideWhileLoads = array_key_exists('hideWhileLoads', $props) ? $props['hideWhileLoads'] : false;
+      if($hideWhileLoads) $data .= ' data-hide-while-loads';
 
       return $data;
     }
