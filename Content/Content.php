@@ -31,7 +31,6 @@
         $data .= ' data-video-webm="' . $webm['url'] . '"';
         $data .= ' data-video-poster="' . $imageBg . '"';
         if(array_key_exists('videoFullscreen', $props) && $props['videoFullscreen']) $data .= ' data-video-fullscreen="true"';
-        $style = '';
       }
     }
 

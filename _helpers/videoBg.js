@@ -1,3 +1,5 @@
+import Helpers from './_general';
+
 /**
  * @preserve Copyright 2011 Syd Lawrence ( www.sydlawrence.com ).
  * Version: 0.2
@@ -348,16 +350,21 @@
 })( jQuery );
 
 jQuery(document).ready(($) => {
-  $('[data-video-mp4]').each(function(){
-    const wrapper = $(this);
-    wrapper.videoBG({
-      mp4: wrapper.data('video-mp4'),
-      webm: wrapper.data('video-webm'),
-      poster: wrapper.data('video-poster'),
-      autoplay: wrapper.data('video-auto-play') || true,
-      loop: wrapper.data('video-loop') || true,
-      opacity: wrapper.data('video-opacity') || 1,
-      fullscreen: wrapper.data('video-fullscreen') || false,
+  if(!Helpers.isMobile) {
+    $('[data-video-mp4]').each(function(){
+      const wrapper = $(this);
+      wrapper.css('background-image', 'none');
+      wrapper.css('background-color', 'none');
+      wrapper.videoBG({
+        mp4: wrapper.data('video-mp4'),
+        webm: wrapper.data('video-webm'),
+        poster: wrapper.data('video-poster'),
+        autoplay: wrapper.data('video-auto-play') || true,
+        loop: wrapper.data('video-loop') || true,
+        opacity: wrapper.data('video-opacity') || 1,
+        fullscreen: wrapper.data('video-fullscreen') || false,
+        zIndex: 1
+      });
     });
-  });
+  }
 });
