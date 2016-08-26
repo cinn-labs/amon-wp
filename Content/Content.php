@@ -18,7 +18,13 @@
     } else {
       $imageBg = array_key_exists('bgImageName', $props) ? getAsset($props['bgImageName']) : '';
     }
-    $style .= ' background-image: url(' . $imageBg . ');';
+    // Overlay
+    $overlayInterceptor = !array_key_exists('overlay', $props) ? '' :
+      'linear-gradient(' .
+        $props['overlay'] . ', ' .
+        $props['overlay'] .
+      '), ';
+    $style .= ' background-image: ' . $overlayInterceptor . 'url(' . $imageBg . ');';
 
     // Bg Video
     if(array_key_exists('videoField', $props)) {
@@ -31,6 +37,7 @@
         $data .= ' data-video-webm="' . $webm['url'] . '"';
         $data .= ' data-video-poster="' . $imageBg . '"';
         if(array_key_exists('videoFullscreen', $props) && $props['videoFullscreen']) $data .= ' data-video-fullscreen="true"';
+        $style = '';
       }
     }
 
