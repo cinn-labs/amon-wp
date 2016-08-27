@@ -1,15 +1,49 @@
+$menuHeight: rem(100) !default;
+
 .cnMenu {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  padding: 2rem 0;
+  min-height: $menuHeight;
   z-index: 5;
 }
 
 .cnMenu.fixed {
+  background: white;
   position: fixed;
   z-index: 10;
-  padding: 0.6rem 0;
+  min-height: $menuHeight / 2;
+
+  .cnMenuLink,
+  .cnMenuLogoWrapper { line-height: $menuHeight / 2; }
+}
+
+.cnMenuLogoWrapper {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: $menuHeight;
+  @include transition(all .3s ease-in-out);
+}
+
+.cnMenuNav {
+  float: right;
+}
+
+.cnMenuLink {
+  display: inline-block;
+  padding: 0 rem(12);
+  line-height: $menuHeight;
+  text-transform: uppercase;
+  font-size: $smallFont;
+  color: $detail2;
+  font-weight: 100;
+  letter-spacing: 1px;
+  @include transition(all .3s ease-in-out);
+  vertical-align: middle;
+
+  &:hover {
+    color: $first;
+  }
 }
