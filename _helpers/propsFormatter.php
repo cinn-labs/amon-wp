@@ -82,6 +82,10 @@
       $hideWhileLoads = array_key_exists('hideWhileLoads', $props) ? $props['hideWhileLoads'] : false;
       if($hideWhileLoads) $data .= ' data-hide-while-loads';
 
+      // Hide while loads
+      $showLoading = array_key_exists('showLoading', $props) ? $props['showLoading'] : false;
+      if($showLoading) $data .= ' data-show-loading';
+
       return $data;
     }
 
