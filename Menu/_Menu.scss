@@ -1,4 +1,5 @@
 $menuHeight: rem(100) !default;
+$fixedMenuHeight: $menuHeight / 2 !default;
 
 .cnMenu {
   position: absolute;
@@ -14,16 +15,20 @@ $menuHeight: rem(100) !default;
   background: white;
   position: fixed;
   z-index: 10;
-  min-height: $menuHeight / 2;
+  min-height: $fixedMenuHeight;
 
   .cnMenuLink,
-  .cnMenuLogoWrapper { line-height: $menuHeight / 2; }
+  .cnMenuLogoWrapper {
+    line-height: $fixedMenuHeight;
+    height: $fixedMenuHeight;
+  }
 }
 
 .cnMenuLogoWrapper {
   vertical-align: middle;
   display: inline-block;
   line-height: $menuHeight;
+  height: $menuHeight;
   @include transition(all .3s ease-in-out);
 }
 
