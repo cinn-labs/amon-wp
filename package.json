@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/cinn-labs/amon-wp/issues"
   },
-  "homepage": "https://github.com/cinn-labs/amon-wp#readme"
+  "homepage": "https://github.com/cinn-labs/amon-wp#readme",
+  "dependencies": {
+    "wallop": "^2.3.0"
+  },
 }

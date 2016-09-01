@@ -1,3 +1,11 @@
+@import '../node_modules/wallop/css/wallop';
+@import '../node_modules/wallop/css/wallop--fade';
+@import '../node_modules/wallop/css/wallop--fold';
+@import '../node_modules/wallop/css/wallop--rotate';
+@import '../node_modules/wallop/css/wallop--scale';
+@import '../node_modules/wallop/css/wallop--slide';
+@import '../node_modules/wallop/css/wallop--vertical-slide';
+
 @import '_helpers/parallax';
 @import 'Anchor/Anchor';
 @import 'Content/Content';
