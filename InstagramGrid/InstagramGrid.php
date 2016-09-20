@@ -21,7 +21,15 @@
     $id = formatId($props);
     $class = formatClasses($props, 'cnInstagramGrid');
     $data = formatDataAttrs($props);
-    $attrs = formatAttrs($id, $class, $data);
+
+    $count = array_key_exists('count', $props) ? $props['count'] : NULL;
+    $format = array_key_exists('format', $props) ? $props['format'] : false;
+    if($format === 'even') {
+      $class .= ' even';
+      if(!$count) $count = 15;
+    } else {
+      $class .= ' mosaic';
+    }
 
     $token = array_key_exists('token', $props) ? $props['token'] : false;
     if(!$token) return;
@@ -29,8 +37,10 @@
     $useModal = array_key_exists('useModal', $props) ? $props['useModal'] : false;
     $images = array();
 
-    $result = fetchInstagramData($token);
+    $result = fetchInstagramData($token, $count);
     $result = json_decode($result);
+
+    $attrs = formatAttrs($id, $class, $data);
 
     echo '<div ' . $attrs . '>';
       if(array_key_exists('data', $result)) {
