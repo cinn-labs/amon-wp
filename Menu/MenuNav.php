@@ -15,7 +15,7 @@
 
     $props['wrapper'] = 'nav';
 
-    Anchor_END($props);
+    Content_END($props);
 
   } endif;
 ?>
