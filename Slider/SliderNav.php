@@ -18,4 +18,20 @@
   if( !function_exists('SliderNav_END') ) : function SliderNav_END($props = array()) {
     echo '</div>';
   } endif;
+
+  if( !function_exists('SliderNav') ) : function SliderNav($props = array()) {
+    $previous = array_key_exists('previous', $props) ? $props['previous'] : false;
+    $next = array_key_exists('next', $props) ? $props['next'] : false;
+
+    SliderNav_BEGIN();
+      SliderNavLink_BEGIN(array('previous'=>1));
+        if($previous) echo $previous;
+        else Icon(array('type'=>'AngleLeft', 'size'=>'xxLarge'));
+      SliderNavLink_END();
+      SliderNavLink_BEGIN();
+        if($next) echo $next;
+        else Icon(array('type'=>'AngleRight', 'size'=>'xxLarge'));
+      SliderNavLink_END();
+    SliderNav_END();
+  } endif;
 ?>

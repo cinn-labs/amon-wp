@@ -16,23 +16,12 @@
 
     $attrs = formatAttrs($id, $class, $data, $style);
 
-    $previous = array_key_exists('previous', $props) ? $props['previous'] : false;
-    $next = array_key_exists('next', $props) ? $props['next'] : false;
     $hideNav = array_key_exists('hideNav', $props) ? $props['hideNav'] : false;
 
     echo '<div ' . $attrs . '>';
-      SliderNav_BEGIN();
-        if(!$hideNav) {
-          SliderNavLink_BEGIN(array('previous'=>1));
-            if($previous) echo $previous;
-            else Icon(array('type'=>'AngleLeft', 'size'=>'xxLarge'));
-          SliderNavLink_END();
-          SliderNavLink_BEGIN();
-            if($next) echo $next;
-            else Icon(array('type'=>'AngleRight', 'size'=>'xxLarge'));
-          SliderNavLink_END();
-        }
-      SliderNav_END();
+      if(!$hideNav) {
+        SliderNav($props);
+      }
 
       echo '<div class="cnSliderContent Wallop-list">';
 
