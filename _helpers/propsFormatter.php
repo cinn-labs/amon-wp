@@ -86,6 +86,12 @@
       $showLoading = array_key_exists('showLoading', $props) ? $props['showLoading'] : false;
       if($showLoading) $data .= ' data-show-loading';
 
+      $generalData = array_key_exists('data', $props) ? $props['data'] : false;
+      if($generalData) foreach ($generalData as $key => $value) {
+        $data .= ' data-' . $key . '="' . $value . '"';
+      }
+
+
       return $data;
     }
 
