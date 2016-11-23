@@ -9,6 +9,7 @@ $fixedMenuHeight: $menuHeight / 2 !default;
   width: 100%;
   min-height: $menuHeight;
   z-index: 5;
+  @include transition(all .3s ease-in-out);
 }
 
 .cnMenu.fixed {
@@ -30,6 +31,7 @@ $fixedMenuHeight: $menuHeight / 2 !default;
   line-height: $menuHeight;
   height: $menuHeight;
   @include transition(all .3s ease-in-out);
+  img { vertical-align: middle; }
 }
 
 .cnMenuNav {
@@ -47,8 +49,6 @@ $fixedMenuHeight: $menuHeight / 2 !default;
   letter-spacing: 1px;
   @include transition(all .3s ease-in-out);
   vertical-align: middle;
-
-  &:hover {
-    color: $first;
-  }
+  img { vertical-align: middle; }
+  &:hover { color: $first; }
 }
