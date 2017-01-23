@@ -1,3 +1,26 @@
+const ModalHelpers = {
+  onOpenStack: [],
+  onCloseStack: [],
+
+  addOnOpenHook(hook) {
+    this.onOpenStack.push(hook);
+  },
+
+  addOnCloseHook(hook) {
+    this.onCloseStack.push(hook);
+  },
+
+  runOnOpenHooks(modalId) {
+    this.onOpenStack.forEach((hook) => hook(modalId));
+  },
+
+  runOnCloseHooks(modalId) {
+    this.onCloseStack.forEach((hook) => {
+      hook(modalId);
+    });
+  },
+}
+
 jQuery(document).ready(($) => {
   const closeModal = (modalId) => {
     const selector = !!modalId ? $(`#${modalId}`) : $('[data-modal]');
@@ -8,11 +31,13 @@ jQuery(document).ready(($) => {
   const openModal = (modalId) => {
     $(`#${modalId}`).fadeIn();
     $('body').addClass('noScroll');
+    ModalHelpers.runOnOpenHooks(modalId);
   }
 
   $('[data-close-modal]').on('click', (event) => {
     const modalId = $(event.currentTarget).data('close-modal');
     closeModal(modalId);
+    ModalHelpers.runOnCloseHooks(modalId);
   });
 
   $('body').on('keyup', function(event){
@@ -25,3 +50,5 @@ jQuery(document).ready(($) => {
     openModal(modalId);
   });
 });
+
+export default ModalHelpers;
