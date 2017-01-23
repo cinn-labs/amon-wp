@@ -15,6 +15,8 @@
       $postId = array_key_exists('postId', $props) ? $props['postId'] : '';
       $imageArrayBg = get_field($bgField, $postId);
       $imageBg = $imageArrayBg && array_key_exists('sizes', $imageArrayBg) ? $imageArrayBg['sizes']['full'] : '';
+    } else if(array_key_exists('bgImageFile', $props)) {
+      $imageBg = $props['bgImageFile'];
     } else {
       $imageBg = array_key_exists('bgImageName', $props) ? getAsset($props['bgImageName']) : '';
     }
