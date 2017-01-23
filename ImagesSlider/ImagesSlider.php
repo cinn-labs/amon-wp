@@ -20,8 +20,8 @@
           Image(array('filePath'=>$image['src'], 'class'=>'cnImagesSliderItemImage'));
 
           echo '<div class="cnImagesSliderItemContent">';
-            Text(array('content'=>$image['title'], 'wrapper'=>'h4'));
-            Anchor(array('href'=>$image['href'], 'content'=>'Abrir no Instagram', 'blank'=>1));
+            if($image['title']) Text(array('content'=>$image['title'], 'wrapper'=>'h4'));
+            if($image['href']) Anchor(array('href'=>$image['href'], 'content'=>'Abrir no Instagram', 'blank'=>1));
           echo '</div>';
         echo '</div>';
       }
