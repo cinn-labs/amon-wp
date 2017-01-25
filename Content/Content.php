@@ -65,4 +65,10 @@
 
     echo '</' . $wrapper . '>';
   } endif;
+
+
+  if( !function_exists('Content') ) : function Content($props = array()) {
+    Content_BEGIN($props);
+    Content_END($props);
+  } endif;
 ?>
