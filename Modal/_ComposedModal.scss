@@ -1,0 +1,17 @@
+.cnModal {
+  z-index: 99999;
+}
+
+.cnModal.dark {
+  background: transparentize($detail1, 0.1);
+
+  .cnModalClose {
+    color: white;
+  }
+}
+
+.cnModalClose {
+  font-size: rem(42);
+  font-weight: 200;
+  cursor: pointer;
+}
